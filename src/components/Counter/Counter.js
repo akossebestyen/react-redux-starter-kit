@@ -13,6 +13,9 @@ export const Counter = (props) => (
     <button className='btn btn-default' onClick={props.increment}>
       Increment
     </button>
+    <button className='btn btn-default' onClick={props.reset}>
+      Reset
+    </button>
     {' '}
     <button className='btn btn-default' onClick={props.doubleAsync}>
       Double (Async)
@@ -23,7 +26,8 @@ export const Counter = (props) => (
 Counter.propTypes = {
   counter     : React.PropTypes.number.isRequired,
   doubleAsync : React.PropTypes.func.isRequired,
-  increment   : React.PropTypes.func.isRequired
+  increment   : React.PropTypes.func.isRequired,
+  reset       : React.PropTypes.func.isRequired
 }
 
 export default Counter
